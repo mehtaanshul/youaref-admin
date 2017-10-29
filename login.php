@@ -3,19 +3,10 @@ session_start();
 $empty = false;
 $wrong = false;
 error_reporting(E_ALL ^ E_WARNING ^ E_NOTICE);
-if(isset($_SESSION['login']) && $_SESSION['login'] == true){
-}
-else {
-    // print_r($_POST);
-    // $url = "index.php";
-    // ob_start();
-    // header('Location: '.$url);
-    // ob_end_flush();
-    // die();
-}
+
 if(isset($_POST['email'])){
     if (isset($_POST['email']) && isset($_POST['pass']) ){
-        if ($_POST['email']=="info@youaref.com" && $_POST['pass'] ="despacito@321"){
+        if ($_POST['email']=="info@youaref.com" && $_POST['pass']=="despacito@321"){
 
             $_SESSION['login'] = "true";
             $url = "http://localhost/admin/index.php";
@@ -27,13 +18,10 @@ if(isset($_POST['email'])){
             die("should have redirected by now");
         }
         else{
-            echo "wrong";
             $wrong = true;
         }
     }
     else {
-
-        echo "mptisset";
         $empty = true;
     }
 }
@@ -44,12 +32,11 @@ if(isset($_SESSION['login'])){
 ?>
 
 <link rel="stylesheet" type="text/css" href="resources/css/bootstrap.min.css">
-<div class="container">    
+<div class="container" style="color:blue;">    
     <div id="loginbox" style="margin-top:50px;" class="col-xs-12 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
         <div class="panel panel-info" >
             <div class="panel-heading">
                 <div class="panel-title">Sign In</div>
-                <!-- <div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="#">Forgot password?</a></div> -->
             </div>     
 
             <div style="padding-top:30px" class="panel-body" >
@@ -59,6 +46,9 @@ if(isset($_SESSION['login'])){
                     <?php 
                     if($wrong== true){
                         echo "You entered wrong credentials";
+                    }
+                    else{
+                     echo "Enter email and password to continue";   
                     }
                     ?>
                 </div>                            
@@ -75,16 +65,6 @@ if(isset($_SESSION['login'])){
                     </div>
 
 
-
-                    <div class="input-group">
-                      <div class="checkbox">
-                        <label>
-                          <input id="login-remember" type="checkbox" name="remember" value="1"> Remember me
-                      </label>
-                  </div>
-              </div>
-
-
               <div style="margin-top:10px" class="form-group">
                 <!-- Button -->
 
@@ -97,79 +77,4 @@ if(isset($_SESSION['login'])){
   </div>                     
 </div>  
 </div>
-<div id="signupbox" style="display:none; margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-    <div class="panel panel-info">
-        <div class="panel-heading">
-            <div class="panel-title">Sign Up</div>
-            <div style="float:right; font-size: 85%; position: relative; top:-10px"><a id="signinlink" href="#" onclick="$('#signupbox').hide(); $('#loginbox').show()">Sign In</a></div>
-        </div>  
-        <div class="panel-body" >
-            <form id="signupform" class="form-horizontal" role="form">
-
-                <div id="signupalert" style="display:none" class="alert alert-danger">
-                    <p>Error:</p>
-                    <span></span>
-                </div>
-
-
-
-                <div class="form-group">
-                    <label for="email" class="col-md-3 control-label">Email</label>
-                    <div class="col-md-9">
-                        <input type="text" class="form-control" name="email" placeholder="Email Address">
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="firstname" class="col-md-3 control-label">First Name</label>
-                    <div class="col-md-9">
-                        <input type="text" class="form-control" name="firstname" placeholder="First Name">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="lastname" class="col-md-3 control-label">Last Name</label>
-                    <div class="col-md-9">
-                        <input type="text" class="form-control" name="lastname" placeholder="Last Name">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="password" class="col-md-3 control-label">Password</label>
-                    <div class="col-md-9">
-                        <input type="password" class="form-control" name="passwd" placeholder="Password">
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="icode" class="col-md-3 control-label">Invitation Code</label>
-                    <div class="col-md-9">
-                        <input type="text" class="form-control" name="icode" placeholder="">
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <!-- Button -->                                        
-                    <div class="col-md-offset-3 col-md-9">
-                        <button id="btn-signup" type="button" class="btn btn-info"><i class="icon-hand-right"></i> &nbsp Sign Up</button>
-                        <span style="margin-left:8px;">or</span>  
-                    </div>
-                </div>
-
-                <div style="border-top: 1px solid #999; padding-top:20px"  class="form-group">
-
-                    <div class="col-md-offset-3 col-md-9">
-                        <!-- <button id="btn-fbsignup" type="button" class="btn btn-primary"><i class="icon-facebook"></i>   Sign Up with Facebook</button> -->
-                    </div>                                           
-
-                </div>
-
-
-
-            </form>
-        </div>
-    </div>
-
-
-
-
-</div> 
 </div>

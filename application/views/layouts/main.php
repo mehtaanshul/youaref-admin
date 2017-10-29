@@ -8,6 +8,9 @@
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <!-- Bootstrap 3.3.6 -->
         <link rel="stylesheet" href="<?php echo site_url('resources/css/bootstrap.min.css');?>">
+
+        <script src="https://use.fontawesome.com/64650e71c4.js"></script>
+
         <!-- Font Awesome -->
         <link rel="stylesheet" href="<?php echo site_url('resources/css/font-awesome.min.css');?>">
         <!-- Ionicons -->
@@ -22,13 +25,13 @@
         <link rel="stylesheet" href="<?php echo site_url('resources/css/excel-bootstrap-table-filter-style.css');?>">
     </head>
     
-    <body class="hold-transition skin-blue sidebar-mini">
+    <body class="hold-transition skin-yellow sidebar-mini">
         <div class="wrapper">
             <header class="main-header">
                 <!-- Logo -->
                 <a href="" class="logo">
-                    <!-- mini logo for sidebar mini 50x50 pixels -->
-                    <span class="logo-mini">You Are F</span>
+                    <!-- mini logo for sidebar mini 50x50 pixels #fad30a #f1c40f -->
+                    <span class="logo-mini" >You Are F</span>
                     <!-- logo for regular state and mobile devices -->
                     <span class="logo-lg">You Are F</span>
                 </a>
@@ -46,30 +49,10 @@
                         <ul class="nav navbar-nav">
                         <!-- User Account: style can be found in dropdown.less -->
                             <li class="dropdown user user-menu">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <img src="<?php echo site_url('resources/img/user2-160x160.jpg');?>" class="user-image" alt="User Image">
-                                    <span class="hidden-xs">Piyush Chhabra</span>
+                                <a href="<?php echo site_url('logout.php');?>">
+                                    <i class="fa fa-sign-out fa-lg" aria-hidden="true"></i>
+                                    <span class="hidden-xs">Sign Out</span>
                                 </a>
-                                <ul class="dropdown-menu">
-                                    <!-- User image -->
-                                    <li class="user-header">
-                                        <img src="<?php echo site_url('resources/img/user2-160x160.jpg');?>" class="img-circle" alt="User Image">
-
-                                    <p>
-                                        Piyush Chhabra
-                                        <small>Admin Panel</small>
-                                    </p>
-                                    </li>
-                                    <!-- Menu Footer-->
-                                    <li class="user-footer">
-                                        <div class="pull-left">
-                                            <a href="#" class="btn btn-default btn-flat">Profile</a>
-                                        </div>
-                                        <div class="pull-right">
-                                            <a href="<?php echo site_url('logout.php');?>" class="btn btn-default btn-flat">Sign out</a>
-                                        </div>
-                                    </li>
-                                </ul>
                             </li>
                         </ul>
                     </div>
@@ -79,15 +62,7 @@
             <aside class="main-sidebar">
                 <!-- sidebar: style can be found in sidebar.less -->
                 <section class="sidebar">
-                    <!-- Sidebar user panel -->
-                    <div class="user-panel">
-                        <div class="pull-left image">
-                            <img src="<?php echo site_url('resources/img/user2-160x160.jpg');?>" class="img-circle" alt="User Image">
-                        </div>
-                        <div class="pull-left info">
-                            <p>Piyush Chhabra</p>
-                        </div>
-                    </div>
+                    
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
                         <li class="header">MAIN NAVIGATION</li>
