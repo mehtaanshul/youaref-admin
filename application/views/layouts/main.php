@@ -30,10 +30,10 @@
             <header class="main-header">
                 <!-- Logo -->
                 <a href="" class="logo">
-                    <!-- mini logo for sidebar mini 50x50 pixels #fad30a #f1c40f -->
-                    <span class="logo-mini" >You Are F</span>
+                    <!-- mini logo for sidebar mini 50x50 pixels -->
+                    <span class="logo-mini"><img src="<?php echo site_url('resources/img/YOUAREF.png');?>" alt="You are F" style="width: 40px; height:40px; ">  You Are F</span>
                     <!-- logo for regular state and mobile devices -->
-                    <span class="logo-lg">You Are F</span>
+                    <span class="logo-lg"><img src="<?php echo site_url('resources/img/YOUAREF.png');?>" alt="You are F" style="width: 40px; height:40px; ">  You Are F</span>
                 </a>
                 <!-- Header Navbar: style can be found in header.less -->
                 <nav class="navbar navbar-static-top">

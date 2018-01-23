@@ -26,8 +26,7 @@
 						<td><?php echo $b['account_number']; ?></td>
 						<td><?php echo $b['pan_number']; ?></td>
 						<td>
-                            <a href="<?php echo site_url('bank_detail/edit/'.$b['bank_id']); ?>" class="btn btn-info btn-xs"><span class="fa fa-pencil"></span> Edit</a> 
-                            <a href="<?php echo site_url('bank_detail/remove/'.$b['bank_id']); ?>" class="btn btn-danger btn-xs"><span class="fa fa-trash"></span> Delete</a>
+                            <a href="<?php echo site_url('bank_detail/edit/'.$b['bank_id']); ?>" class="btn btn-info btn-xs"><span class="fa fa-pencil"></span> Edit</a>
                         </td>
                     </tr>
                     <?php } ?>

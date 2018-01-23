@@ -45,9 +45,9 @@
 						</div>
 					</div>
 					<div class="col-md-6">
-						<label for="degree" class="control-label">Degree</label>
+						<label for="degree" class="control-label">About User</label>
 						<div class="form-group">
-							<input type="text" name="degree" value="<?php echo ($this->input->post('degree') ? $this->input->post('degree') : $user['degree']); ?>" class="form-control" id="degree" />
+							<textarea name="degree" class="form-control" id="degree"><?php echo ($this->input->post('degree') ? $this->input->post('degree') : $user['degree']); ?></textarea>
 						</div>
 					</div>
 					<!--<div class="col-md-6">
@@ -73,13 +73,13 @@
 						</div>
 					</div>
 					<div class="col-md-6">
-						<label for="college" class="control-label">College</label>
+						<label for="college" class="control-label">Social Outreach</label>
 						<div class="form-group">
 							<textarea name="college" class="form-control" id="college"><?php echo ($this->input->post('college') ? $this->input->post('college') : $user['college']); ?></textarea>
 						</div>
 					</div>
 					<div class="col-md-6">
-						<label for="cv" class="control-label">Cv</label>
+						<label for="cv" class="control-label">Why YouAreF?</label>
 						<div class="form-group">
 							<textarea name="cv" class="form-control" id="cv"><?php echo ($this->input->post('cv') ? $this->input->post('cv') : $user['cv']); ?></textarea>
 						</div>

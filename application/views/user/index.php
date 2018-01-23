@@ -18,11 +18,11 @@
 							<th>Email</th>
 							<th>Phone</th>
 							<th>Address</th>
-							<th>Degree</th>
+							<th>About User</th>
 							<th>Status</th>
 							<th>Google Id</th>
-							<th>College</th>
-							<th>Cv</th>
+							<th>Social Outreach</th>
+							<th>Why YouareF</th>
 							<th>Actions</th>
 	                    </tr>
                 	</thead>

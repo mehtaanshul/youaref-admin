@@ -9,7 +9,7 @@ if(isset($_POST['email'])){
         if ($_POST['email']=="info@youaref.com" && $_POST['pass']=="despacito@321"){
 
             $_SESSION['login'] = "true";
-            $url = "http://localhost/admin/index.php";
+            $url = "http://admin.youaref.biz/index.php";
             ob_start();
             header('Location: '.$url);
             ob_end_flush();
@@ -32,51 +32,7 @@ if(isset($_SESSION['login'])){
 ?>
 
 <link rel="stylesheet" type="text/css" href="resources/css/bootstrap.min.css">
-<!--<div class="container" style="color:blue;">    
-    <div id="loginbox" style="margin-top:50px;" class="col-xs-12 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
-        <div class="panel panel-info" >
-            <div class="panel-heading">
-                <div class="panel-title">Sign In</div>
-            </div>     
 
-            <div style="padding-top:30px" class="panel-body" >
-
-                <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
-                <div <?php ?> class="well">
-                    <?php 
-                    if($wrong== true){
-                        echo "You entered wrong credentials";
-                    }
-                    else{
-                     echo "Enter email and password to continue";   
-                    }
-                    ?>
-                </div>                            
-                <form id="loginform" class="form-horizontal" role="form"  method="POST">
-
-                    <div style="margin-bottom: 25px" class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                        <input id="email" type="email" name="email" class="form-control" required="" placeholder="email">                                        
-                    </div>
-
-                    <div style="margin-bottom: 25px" class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                        <input id="pass" required="" type="password" class="form-control" name="pass" placeholder="password">
-                    </div>
-
-
-              <div style="margin-top:10px" class="form-group">
-              
-
-                <div class="col-sm-12 controls">
-                  <input  class="btn btn-success" type="submit" name="" value="Login">
-              </div>
-          </div>
-      </form>     
-  </div>                     
-</div>  
-</div>
-</div> -->
 <Style>
 .wrapper {    
     margin-top: 80px;
@@ -129,14 +85,15 @@ input[type="password"] {
 
 <div class = "container">
     <div class="wrapper">
-        <form action="" method="post" name="Login_Form" class="form-signin">       
-            <h3 class="form-signin-heading">Welcome Back! Please Sign In</h3>
-              <hr class="colorgraph"><br>
+        <form action="" method="post" name="Login_Form" class="form-signin" style="background-color: #fad30a">
+            <img src="resources/img/YOUAREF.png" alt="You are F" style="width:130px; height:130px; display:block; margin:auto; margin-bottom:20px" >
+            <!--<h3 class="form-signin-heading">Welcome Back! Please Sign In</h3>
+              <hr class="colorgraph"><br>-->
               
               <input type="text" class="form-control" id="email" name="email" placeholder="Email" required="" autofocus="" />
               <input type="password" class="form-control" id="pass" name="pass" placeholder="Password" required=""/>            
              
-              <button class="btn btn-lg btn-primary btn-block"  name="Submit" value="Login" type="Submit">Login</button>            
+              <button class="btn btn-lg btn-primary btn-block"  name="Submit" value="Login" type="Submit" style="background-color:black">Login</button>            
         </form>         
     </div>
 </div>
